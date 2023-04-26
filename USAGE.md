@@ -2,12 +2,11 @@
 ```go
 package main
 
-import (
-    "context"
-    "log"
-    "PetStore"
-    "PetStore/pkg/models/shared"
-    "PetStore/pkg/models/operations"
+import(
+	"context"
+	"log"
+	"PetStore"
+	"PetStore/pkg/models/shared"
 )
 
 func main() {
@@ -16,7 +15,7 @@ func main() {
     ctx := context.Background()    
     req := shared.NewPet{
         Name: "Terrence Rau",
-        Tag: "nulla",
+        Tag: sdk.String("nulla"),
     }
 
     res, err := s.AddPet(ctx, req)
