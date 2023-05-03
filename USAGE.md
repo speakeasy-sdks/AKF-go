@@ -12,13 +12,11 @@ import(
 func main() {
     s := sdk.New()
 
-    ctx := context.Background()    
-    req := shared.NewPet{
+    ctx := context.Background()
+    res, err := s.AddPet(ctx, shared.NewPet{
         Name: "Terrence Rau",
         Tag: sdk.String("nulla"),
-    }
-
-    res, err := s.AddPet(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }

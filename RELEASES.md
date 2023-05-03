@@ -15,3 +15,11 @@ Based on:
 - Speakeasy CLI 1.23.1 (2.21.1) https://github.com/speakeasy-api/speakeasy
 ### Releases
 - [Go v1.1.0] https://github.com/speakeasy-sdks/AKF-go/releases/tag/v1.1.0 - .
+
+## 2023-05-03 01:17:42
+### Changes
+Based on:
+- OpenAPI Doc 1.0.0 https://raw.githubusercontent.com/OAI/OpenAPI-Specification/main/examples/v3.0/petstore-expanded.yaml
+- Speakeasy CLI 1.27.0 (2.24.0) https://github.com/speakeasy-api/speakeasy
+### Releases
+- [Go v1.2.0] https://github.com/speakeasy-sdks/AKF-go/releases/tag/v1.2.0 - .

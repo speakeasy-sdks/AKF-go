@@ -34,13 +34,11 @@ import(
 func main() {
     s := sdk.New()
 
-    ctx := context.Background()    
-    req := shared.NewPet{
+    ctx := context.Background()
+    res, err := s.SDK.AddPet(ctx, shared.NewPet{
         Name: "Dallas Kassulke",
         Tag: sdk.String("suscipit"),
-    }
-
-    res, err := s.SDK.AddPet(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -70,12 +68,10 @@ import(
 func main() {
     s := sdk.New()
 
-    ctx := context.Background()    
-    req := operations.DeletePetRequest{
+    ctx := context.Background()
+    res, err := s.SDK.DeletePet(ctx, operations.DeletePetRequest{
         ID: 437587,
-    }
-
-    res, err := s.SDK.DeletePet(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -105,12 +101,10 @@ import(
 func main() {
     s := sdk.New()
 
-    ctx := context.Background()    
-    req := operations.FindPetByIDRequest{
+    ctx := context.Background()
+    res, err := s.SDK.FindPetByID(ctx, operations.FindPetByIDRequest{
         ID: 297534,
-    }
-
-    res, err := s.SDK.FindPetByID(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
@@ -144,15 +138,13 @@ import(
 func main() {
     s := sdk.New()
 
-    ctx := context.Background()    
-    req := operations.FindPetsRequest{
+    ctx := context.Background()
+    res, err := s.SDK.FindPets(ctx, operations.FindPetsRequest{
         Limit: sdk.Int(891773),
         Tags: []string{
             "delectus",
         },
-    }
-
-    res, err := s.SDK.FindPets(ctx, req)
+    })
     if err != nil {
         log.Fatal(err)
     }
