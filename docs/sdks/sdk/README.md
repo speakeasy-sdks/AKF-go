@@ -2,7 +2,7 @@
 
 ## Overview
 
-A sample API that uses a petstore as an example to demonstrate features in the OpenAPI 3.0 specification
+Swagger Petstore: A sample API that uses a petstore as an example to demonstrate features in the OpenAPI 3.0 specification
 
 ### Available Operations
 
@@ -49,6 +49,19 @@ func main() {
 }
 ```
 
+### Parameters
+
+| Parameter                                             | Type                                                  | Required                                              | Description                                           |
+| ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- | ----------------------------------------------------- |
+| `ctx`                                                 | [context.Context](https://pkg.go.dev/context#Context) | :heavy_check_mark:                                    | The context to use for the request.                   |
+| `request`                                             | [shared.NewPet](../../models/shared/newpet.md)        | :heavy_check_mark:                                    | The request object to use for the request.            |
+
+
+### Response
+
+**[*operations.AddPetResponse](../../models/operations/addpetresponse.md), error**
+
+
 ## DeletePet
 
 deletes a single pet based on the ID supplied
@@ -82,6 +95,19 @@ func main() {
 }
 ```
 
+### Parameters
+
+| Parameter                                                                  | Type                                                                       | Required                                                                   | Description                                                                |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| `ctx`                                                                      | [context.Context](https://pkg.go.dev/context#Context)                      | :heavy_check_mark:                                                         | The context to use for the request.                                        |
+| `request`                                                                  | [operations.DeletePetRequest](../../models/operations/deletepetrequest.md) | :heavy_check_mark:                                                         | The request object to use for the request.                                 |
+
+
+### Response
+
+**[*operations.DeletePetResponse](../../models/operations/deletepetresponse.md), error**
+
+
 ## FindPetByID
 
 Returns a user based on a single ID, if the user does not have access to the pet
@@ -114,6 +140,19 @@ func main() {
     }
 }
 ```
+
+### Parameters
+
+| Parameter                                                                      | Type                                                                           | Required                                                                       | Description                                                                    |
+| ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
+| `ctx`                                                                          | [context.Context](https://pkg.go.dev/context#Context)                          | :heavy_check_mark:                                                             | The context to use for the request.                                            |
+| `request`                                                                      | [operations.FindPetByIDRequest](../../models/operations/findpetbyidrequest.md) | :heavy_check_mark:                                                             | The request object to use for the request.                                     |
+
+
+### Response
+
+**[*operations.FindPetByIDResponse](../../models/operations/findpetbyidresponse.md), error**
+
 
 ## FindPets
 
@@ -154,3 +193,16 @@ func main() {
     }
 }
 ```
+
+### Parameters
+
+| Parameter                                                                | Type                                                                     | Required                                                                 | Description                                                              |
+| ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
+| `ctx`                                                                    | [context.Context](https://pkg.go.dev/context#Context)                    | :heavy_check_mark:                                                       | The context to use for the request.                                      |
+| `request`                                                                | [operations.FindPetsRequest](../../models/operations/findpetsrequest.md) | :heavy_check_mark:                                                       | The request object to use for the request.                               |
+
+
+### Response
+
+**[*operations.FindPetsResponse](../../models/operations/findpetsresponse.md), error**
+

@@ -21,5 +21,15 @@ pkg/models/operations/findpets.go
 pkg/models/shared/pet.go
 pkg/models/shared/error.go
 pkg/models/shared/newpet.go
-docs/sdk/README.md
+docs/sdks/sdk/README.md
 USAGE.md
+docs/models/operations/addpetresponse.md
+docs/models/operations/deletepetrequest.md
+docs/models/operations/deletepetresponse.md
+docs/models/operations/findpetbyidrequest.md
+docs/models/operations/findpetbyidresponse.md
+docs/models/operations/findpetsrequest.md
+docs/models/operations/findpetsresponse.md
+docs/models/shared/pet.md
+docs/models/shared/error.md
+docs/models/shared/newpet.md
